@@ -1,4 +1,4 @@
-# df-one-page-site
+# A pure JavaScript web page example
 
 This folder contains the files for showcasing a custom slider component and an article management system with a Node.js backend.
  
