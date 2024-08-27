@@ -27,7 +27,7 @@ This folder contains the files for showcasing a custom slider component and an a
 Once the server is running, you can access it in your web browser by navigating to `http://localhost:3000` (or the port specified in your `server.js` file).
 
 ### Additional Notes
-* **Port Configuration:** If you want to change the port, modify the `port` variable in your `index.js` file.
+* **Port Configuration:** If you want to change the port, modify the `port` variable in your `server.js` file.
 * **Error Handling:** Implement proper error handling mechanisms to catch and log any exceptions.
 * **Environment Variables:** Consider using environment variables to configure your server settings (e.g., database connection details, API keys).
 * **Production Environment:** For production deployment, you might need to use a process manager like PM2 to ensure the server runs continuously.
