@@ -1,0 +1,19 @@
+<pre>
+<code>
+//spread operator new array 
+//produce -> fruits + vegetables
+const fruits = ["apples", "bananas"];
+const vegetables = ["corn", "potatoes"];
+const produce = [...fruits,...vegetables];
+console.log(produce);
+
+//rest parameter ...nums
+function sum(...nums) {
+    let total = 0;  
+    for(const num of nums) {
+      total += num;
+    }
+    return total;
+}
+</code>
+</pre>

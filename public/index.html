@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>dfile</title>
+		<meta name="description" content="Hello World">
+		<meta name="author" content="dfile">
+		<link rel="stylesheet" href="./css/main.css">
+		<link rel="stylesheet" href="./css/nav.css">
+		<link rel="stylesheet" href="./css/df-slider.css">
+		<script defer type="module" src="./js/main.js"></script>
+	</head>
+	<body class="top">
+	<a class="sr-only" href="#main-content">Skip to main content</a>
+	<button title="Show Navigation" class="hamburger hamburger--squeeze toggle-nav">
+		<div class="hamburger-box">
+			<div class="hamburger-inner"></div>
+		</div>
+	</button>
+	<div class="container">
+		<header>
+			<div class="logo"><a href="/" title="Home"><img src="images/dfile-logo.svg" alt="DFile Logo" width="50" height="90"></a></div>
+			<nav class="topnav" aria-label="Main Navigation">
+				<ul class="main_menu">
+					<li><a href="#section-slider">Slider</a></li>
+					<li><a href="#section-articles">Artikel</a></li>
+					<li><a href="/backend/" target="_blank" rel="noopener">Artikel-Backend</a></li>
+				</ul>
+			</nav><!--nav-->
+		</header><!--header-->
+		<main>
+			<section id="section-slider">
+				<div class="section-info">
+					<div class="headline-container"><h2 class="animate typed-out">Slider mit Preloader, Text- und Bildanimationen</h2></div>
+					<p><strong>Funktionen und Merkmale:</strong></p>
+					<div class="description">
+						<ul class="animate">
+							<li>Preloader: Ein animierter Preloader überbrückt Ladezeiten und verbessert die Nutzererfahrung durch visuelle Rückmeldung.</li>
+							<li>Textanimationen: Mittels CSS und JavaScript wurden dynamische Texteffekte implementiert, die den Slider lebendig und ansprechend gestalten.</li>
+							<li>Bildanimationen: Die Bilder werden nicht nur angezeigt, sondern mit verschiedenen Überblendungen und Effekten versehen.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="df-slider df-slider1">
+					<div class="slider">
+						<ul>
+							<li><img loading="lazy" src="./images/slider01.jpg" alt="Image: daniel-carmona-Tr8vSTgHReI-unsplash" width="640" height="360">
+								<img class="overlay" loading="lazy" src="./images/slider01.svg" alt="" width="640" height="360">
+								<span>Welcome</span>
+							</li>
+							<li><img loading="lazy" src="./images/slider02.jpg" alt="Image: ryan-klaus-KYLSM4TICfg-unsplash" width="640" height="360">
+								<img class="overlay" loading="lazy" src="./images/slider02.svg" alt="" width="640" height="360">
+								<span>Architecture</span>
+							</li>
+							<li><img loading="lazy" src="./images/slider03.jpg" alt="Image: janmesh-shah-ToUKooQnFAs-unsplash" width="640" height="360">
+								<img class="overlay" loading="lazy" src="./images/slider03.svg" alt="" width="640" height="360">
+								<span>Black and White</span>
+							</li>
+							<li><img loading="lazy" src="./images/slider04.jpg" alt="Image: ole-kloth-GDFivhlPnRI-unsplash" width="640" height="360">
+								<img class="overlay" loading="lazy" src="./images/slider04.svg" alt="" width="640" height="360">
+								<span>Reflecting</span>
+							</li>
+							<li><img loading="lazy" src="./images/slider05.jpg" alt="Image: refargotohp-UHHFYUTz_n0-unsplash" width="640" height="360">
+								<img class="overlay" loading="lazy" src="./images/slider05.svg" alt="" width="640" height="360">
+								<a href="https://dfile.de" target="_blank" >More Information</a>
+							</li>
+						</ul>
+						<button class="btn prev" aria-label="Button Previous Image"></button>
+						<button class="btn next" aria-label="Button Next Image"></button>
+					</div> 
+					<div class="dotnav"></div>
+				</div><!-- df-slider -->   	
+			</section>
+			<section id="section-articles">
+				<div class="section-info">
+					<div class="headline-container"><h2 class="animate typed-out">Artikelverwaltungssystem mit Node.js-Backend</h2></div>
+					<p><strong>Funktionen und Merkmale:</strong></p>
+					<div class="description">
+						<ul class="animate">
+							<li>JSON-Daten: Artikel werden dynamisch aus einer JSON-Datei generiert, was eine flexible und effiziente Inhaltsverwaltung ermöglicht</li>
+							<li>Dynamisches Laden von HTML: Die Inhalte der Artikel werden aus separaten HTML-Dateien geladen, was eine klare Trennung von Struktur und Inhalt sicherstellt.</li>
+							<li>Node.js-Backend: Das Backend, entwickelt mit Node.js, ermöglicht das Erstellen, Bearbeiten und Löschen von Artikeln und unterstützt grundlegende CRUD-Operationen (Create, Read, Update, Delete).</li>
+						</ul>
+					</div>
+				</div>
+				<p><svg class="feather tag"><use href="./icons/feather-sprite.svg#tag"/></svg>Nach Tags filtern:</p>
+				<div id="alltags" class="tags"></div>
+				<div id="articles"></div>
+				<div id="icons"></div>
+			</section>
+		</main><!--main-->
+		<footer>
+		</footer><!--footer-->
+		<a class="scroll-to-top" title="Zum Seitenanfang" role="button" aria-label="Scroll to Top"><svg class="feather"><use href="./icons/feather-sprite.svg#chevrons-up"/></svg></a>
+	</div><!--container-->
+	</body>
+</html>

@@ -1,0 +1,21 @@
+{
+    "alltags":["HTML", "CSS", "JavaScript", "VSCode"],
+    "icons":[
+        {
+           "file":"html5.svg",
+           "alt":"Icon HTML" 
+        },
+        {
+            "file":"css3.svg",
+            "alt":"Icon CSS" 
+         },
+         {
+            "file":"js.svg",
+            "alt":"Icon JavaSript" 
+         },
+         {
+            "file":"vscode.svg",
+            "alt":"Icon Visual Studio Code" 
+         }
+    ]
+}

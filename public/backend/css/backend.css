@@ -1,0 +1,130 @@
+header{
+    display: block;
+    height: 4rem;
+}
+
+.backend-form{
+    width: 100%;
+    background: var(--sec-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.backend-form .alert{
+    position: absolute;
+    right: 20px;
+    top: -200px;
+    padding: 0 20px;
+    border: 1px solid #fff;
+    display: flex;
+    align-content: center;
+    transition:top 0.5s ease-in-out;
+}
+
+.backend-form .alert.active{
+    top:0;
+}
+
+.backend-form .alert svg{
+    margin-right: 10px;
+    margin-top: -5px;
+       
+}
+.backend-form input{
+    max-width: 400px;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 5px 10px;
+}
+
+.backend-form textarea{
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 5px 10px;
+    min-height: 200px;
+}
+.backend-form .buttons{
+    display: flex;
+}
+
+.backend-form #tags-container{
+    display: flex;
+    margin-top: 10px;
+}
+
+.backend-form #tags-container div{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.backend-form #tags-container label{
+    margin-right: 10px;
+}
+.backend-form #tags-container input{
+    margin-top: 0;
+    border: none;
+}
+
+.backend-form button{
+    display: block;
+    margin-top: 1rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+}
+
+.backend-form button#editButton{
+    visibility: hidden;
+    margin-left: 10px;
+}
+
+.backend-form button#resetButton{
+margin-left: auto;
+}
+.list-items{
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--sec-color);
+}
+.list-items div{
+    padding: 5px 10px;
+    background: var( --sec-color-1);
+    color: var(--text-color);
+    border: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+ }
+ .list-items div h2{
+    flex-grow: 1;
+    font-size: 1rem;
+ } 
+ .list-items div button{
+    display: block;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    margin-left: auto;
+    font-size: 0.8rem;
+    background: none;
+    color: #eee;
+ }
+
+ .list-items div button.show-button{
+    margin-right: 10px;
+ }
+
+ .list-items div .inner-div{
+    border: none;
+    padding: 0 10px;
+    display: none;
+    overflow: hidden;
+    line-height: 1rem;
+ }
+
+ .list-items div .inner-div.is-active{
+    display: block;
+    width: 100%;
+ }

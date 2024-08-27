@@ -1,0 +1,254 @@
+.df-slider{
+    --slider-max-width:1200px;
+    /* add initial slider height */
+    --slider-height:400px;
+    --btn-bgcolor:rgba(256, 256,256,0.2);
+    --btn-bgcolor-hover:rgba(256, 256,256,0.8);
+    --loader-bg-color:linear-gradient(0deg, rgb(19, 19, 19) 0%, rgb(39, 39, 39) 100%);
+    --loder-icon-size:100px;
+    --dotnav-bg-color:#aaa;
+    --dotnav-activ-bg-color:#fff;
+    position: relative;
+    max-width: var(--slider-max-width);
+    margin: 0 auto;
+    height:var(--slider-height);
+    margin-bottom: 30px;
+    display: block;
+    transition: height 1s ease-in-out;
+}
+.df-slider .slider{
+    position: relative;
+    overflow: hidden; 
+}
+
+.df-slider .loader{
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: var(--loader-bg-color);
+    overflow: hidden; 
+    opacity: 1;
+}
+
+.df-slider .loader.fadeout{
+    opacity: 1;
+    animation:fade-out 0.5s ease-out forwards;
+}
+@keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+.df-slider .loader .icon{
+    width: 100%;
+    height: 100%;
+    background: url(./df-slider-icons/df-loader.svg) no-repeat;
+    background-size: var(--loder-icon-size);
+    background-position: center;
+    opacity:0;
+    animation: 8s linear 0s infinite df-icon-rotation,
+               0.5s ease-out 0.1s forwards df-fade-in; 
+}
+
+@keyframes df-icon-rotation{
+  0% {transform:rotate(230deg)}
+  100%{transform:rotate(470deg)}
+  }
+
+  @keyframes df-fade-in {
+    0% {opacity:0}
+    100% {opacity: 1}
+  }
+
+.df-slider ul{
+    display: block;
+    position: relative;
+}
+
+.df-slider ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    list-style: none;
+    z-index: 0;
+    opacity: 1;
+}
+
+.df-slider ul li img{
+    width: 100%;
+    height: auto;
+}
+
+.df-slider .btn{
+    position: absolute;
+    z-index: 10;
+    height: 50px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    background: url(./df-slider-icons/arrow.svg) no-repeat;
+    background-color: var(--btn-bgcolor);
+    background-size: 40px;
+    top:calc(50% - 20px);
+    background-position-y:5px;
+    transition: background-position-x 0.2s ease-in-out, 
+                background-color 1s ease-in-out,
+                left 0.5s ease-in-out,
+                right 0.5s ease-in-out;
+    border-radius: 0 10% 10% 0;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
+    /* visibility: hidden; */
+}
+
+@media (max-width: 576px) { 
+    .df-slider .btn{
+        height: 30px;
+        width: 30px;
+        background-size: 20px;
+    }
+ }
+
+.df-slider .btn:hover{
+    background-position-x:5px;
+    background-color: var(--btn-bgcolor-hover);
+} 
+.df-slider .btn.prev{
+    left: -50px; 
+}
+.df-slider:hover .btn.prev{
+    left: 0;
+}
+
+.df-slider .btn.next{
+    right: -50px; 
+    transform: rotate(180deg);
+}
+
+.df-slider:hover .btn.next{
+    right: 0;
+}
+
+.df-slider .dotnav{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 1rem;
+    visibility: hidden;
+}
+.df-slider .dotnav button{
+    display: block;
+    width: 20px;
+    height: 10px;
+    border: none;
+    margin: 0 5px;
+    background:var(--dotnav-bg-color);
+    /* cursor: pointer; */
+}
+
+.df-slider .dotnav button:hover{
+    background:var(--dotnav-activ-bg-color);
+    transition:  background-color 1s ease-in-out;
+}
+.df-slider .dotnav button.active{
+    background:var(--dotnav-activ-bg-color);
+}
+
+/* slides animations */
+.df-slider li.active{
+  animation: df-slide-ani 1s ease-in 0s forwards;
+  opacity: 0;
+}
+
+@keyframes df-slide-ani{
+	0% {
+    opacity: 0;
+		transform: scale(1.1);
+	}
+
+	100% {
+    opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* slidertext */
+.df-slider ul li span{
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    right:1rem;
+    background: rgba(0,0,0,0.5);
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    color:#fff;
+    font-size: clamp(0.5rem, 4vw, 2rem);
+    text-transform: uppercase;
+   opacity: 1;
+}
+.df-slider ul li.active span{
+    animation:textFadeIn 0.5s ease-in 1s forwards;
+    opacity: 0;
+}
+@keyframes textFadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  /* cta link*/
+.df-slider ul li a{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    color:#fff;
+    font-size: clamp(0.5rem, 4vw, 2rem);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #888;
+}
+
+.df-slider ul li.active a{
+    animation:ctaFadeIn 1s ease-in-out 0.5s;
+    opacity: 1;
+}
+
+@keyframes ctaFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0)
+    }
+    to {
+      opacity: 1;
+      transform: scale(1)
+    }
+  }
+
+  /* svg overlay */
+  .df-slider ul li .overlay{
+    position: absolute;
+  }
+  .df-slider ul li.active .overlay{
+  animation:ctaOverlayFadeIn 3s ease-in-out 0s forwards;
+    opacity: 0;
+  }
+  @keyframes ctaOverlayFadeIn {
+    from {
+      opacity: 0;
+    
+    }
+    to {
+      opacity: 1;
+  
+    }
+  }

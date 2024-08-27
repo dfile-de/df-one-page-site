@@ -1,0 +1,22 @@
+{
+    "articles": [
+        {
+            "id": "4615-js-function",
+            "headline": "JavaScript function",
+            "file": "4615-js-function.html",
+            "tags": "JavaScript"
+        },
+        {
+            "id": "6217-js-spread-operator",
+            "headline": "JavaScript spread operator",
+            "file": "6217-js-spread-operator.html",
+            "tags": "JavaScript"
+        },
+        {
+            "id": "4295-vscode-snippet",
+            "headline": "Visual Studio Code snippets",
+            "file": "4295-vscode-snippet.html",
+            "tags": "VSCode"
+        }
+    ]
+}

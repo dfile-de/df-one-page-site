@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>dfile backend</title>
+        <link rel="stylesheet" href="../css/main.css"> 
+        <link rel="stylesheet" href="./css/backend.css"> 
+        <script src="./js/backendForm.js" type="module" defer></script>
+    </head>
+    <body>
+        <div class="container">   
+            <header><h1>Node.js-Backend</h1></header>
+            <main>
+                <div class="backend-form">
+                    <h2>Eintrag anlegen:</h2>
+                    <div class="alert"><p><svg class="feather"><use href="../icons/feather-sprite.svg#alert-circle"/></svg><span>Meldung</span></p></div>
+                    <form id="form" name="send">
+                        <input type="text" name="headline" placeholder="Headline" required> 
+                        <input type="text" name="id" placeholder="ID" required>
+                        <p>Tags:</p>
+                        <div id="tags-container"></div>
+                        <textarea name="contentHtml" required></textarea>
+                        <input type="hidden" name="realid">
+                        <div class="buttons">
+                            <button type="button" id="createButton">Neuer Eintrag</button>
+                            <button type="button" id="editButton">Eintrag Ändern</button>
+                            <button type="button" id="resetButton">Reset</button>
+                        </div>
+                    </form>
+                </div>
+                <h2>Einträge:</h2>
+                <div class="list-items"></div>
+            </main>
+            <footer></footer>
+        </div>
+    </body>
+</html>
