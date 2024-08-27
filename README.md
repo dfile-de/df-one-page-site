@@ -20,11 +20,11 @@ This folder contains the files for showcasing a custom slider component and an a
 
 3. **Start the server:**
    ```bash
-   node index.js
+   node server.js
    ```
 
 ### Accessing the Server
-Once the server is running, you can access it in your web browser by navigating to `http://localhost:3000` (or the port specified in your `index.js` file).
+Once the server is running, you can access it in your web browser by navigating to `http://localhost:3000` (or the port specified in your `server.js` file).
 
 ### Additional Notes
 * **Port Configuration:** If you want to change the port, modify the `port` variable in your `index.js` file.
