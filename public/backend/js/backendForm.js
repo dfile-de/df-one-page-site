@@ -88,7 +88,7 @@ createButton.addEventListener('click',(event)=>{
         myAlert('Der Eintrag wurde gespeichert.');
     }
     else{
-        myAlert('Alle Fleder müssen ausgefüllt werden.');
+        myAlert('Alle Felder müssen ausgefüllt werden.');
     }
 });
 
