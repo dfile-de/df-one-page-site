@@ -88,7 +88,7 @@ const getEditData=(id) => {
 };
 
 //##############################################################
-// save json file
+// update json and html file
 const updateData = (data) => {
     const randomNumber = Math.floor(Math.random() * 9000) + 1000;
     const id = `${randomNumber}-${data.id}`;
@@ -106,7 +106,7 @@ const updateData = (data) => {
         return fs.unlink(`${htmlFolder}/${data.realid}.html`);
     })
     .then(() => {
-        // html file
+        // update html file
         const htmlContent = `<pre>\n<code>\n${data.contentHtml}\n</code>\n</pre>`;
         return fs.writeFile(`${htmlFolder}/${id}.html`, htmlContent, 'utf8');
     })
