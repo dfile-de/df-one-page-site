@@ -21,7 +21,7 @@ const jsonData = `${rootFolder}/data/articles.json`;
 const htmlFolder = `${rootFolder}/data/articles/`; 
 
 //############################################################## 
-// save json file
+// save json and html file
 const saveData = (data) => {
     // random id 1234-id -> better use date for id?
     const randomNumber = Math.floor(Math.random() * 9000) + 1000;
