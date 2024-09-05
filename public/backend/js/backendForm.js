@@ -106,7 +106,7 @@ editButton.addEventListener('click',(event)=>{
         myAlert('Der Eintrag wurde geändert.');
     }
     else{
-        myAlert('Alle Fleder müssen ausgefüllt werden.');
+        myAlert('Alle Felder müssen ausgefüllt werden.');
     }
  });
 
