@@ -43,7 +43,7 @@ const saveData = (data) => {
         return fs.writeFile(jsonData, JSON.stringify(json, null, 4), 'utf8');
     })
     .then(() => {
-        // html file
+        // save html file
         const htmlContent = `<pre>\n<code>\n${data.contentHtml}\n</code>\n</pre>`;
         return fs.writeFile(`${htmlFolder}/${id}.html`, htmlContent, 'utf8');
     })
