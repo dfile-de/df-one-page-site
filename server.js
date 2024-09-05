@@ -62,7 +62,7 @@ const deleteData=(id) => {
         const filteredArticles = json.articles.filter(article => article.id !== id);
         //id to remove not fount
         if (filteredArticles.length === json.articles.length) {
-            throw new Error('Article not found');
+            throw new Error('Article not fount');
         }
         // all ok -> save json file
         json.articles = filteredArticles;
