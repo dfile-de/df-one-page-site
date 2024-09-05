@@ -124,7 +124,6 @@ app.post('/saveNewContent', (req, res) => {
 }); 
 
 //############################################################## 
-
 // route update content
 app.post('/updateContent', (req, res) => {
     const data = req.body;
