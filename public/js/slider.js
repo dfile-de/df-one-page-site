@@ -141,7 +141,7 @@ const dfSliderModul=(sliderSelector)=>{
         imageIndex=nextIndex();
         showImages('next',imageIndex);
     }
-    const ToPrevSlide=()=>{
+    const toPrevSlide=()=>{
         imageIndex=prevIndex();
         showImages('prev',imageIndex);
     }
@@ -162,7 +162,7 @@ const dfSliderModul=(sliderSelector)=>{
     sliderLoaded();
     resizeSlider();
     nextButton.addEventListener('click',toNextSlide);
-    prevButton.addEventListener('click',ToPrevSlide);
+    prevButton.addEventListener('click',toPrevSlide);
   
 }//end dfSlider
 
