@@ -1,4 +1,4 @@
-# A pure JavaScript web page example
+# A pure JavaScript web page example with a Node.js backend.
 
 This folder contains the files for showcasing a custom slider component and an article management system with a Node.js backend.
  
